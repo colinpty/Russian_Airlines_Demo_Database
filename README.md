@@ -55,5 +55,27 @@ BFFE54 |	102100.00
 AA78D0 |	20500.00
 7EC010 |	305900.00
 
+* We want to know the percentage of Business Class Seats for each type of aircraft?
+```
+SELECT aircrafts_data.aircraft_code, CONCAT(ROUND(
+                                            CAST(COUNT(CASE WHEN fare_conditions = 'Business' THEN 1 ELSE null  END) as numeric)
+                                             / 
+                                            CAST(count(*) as numeric) * 100, 2), '%') as total_percentage
+FROM bookings.seats inner JOIN bookings.aircrafts_data on aircrafts_data.aircraft_code  = seats.aircraft_code
+GROUP BY aircrafts_data.aircraft_code;
+```
+aircraft_code | total_percentage
+------------ | -------------
+319	| 17.24%
+320	| 14.29%
+321	| 16.47%
+733	| 9.23%
+763	| 13.51%
+773	| 7.46%
+CN1	| 0.00%
+CR2	| 0.00%
+SU9	| 12.37%
+
+
 
 
