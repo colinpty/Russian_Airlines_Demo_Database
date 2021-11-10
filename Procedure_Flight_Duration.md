@@ -35,6 +35,7 @@ call GenerateReport (627);
 select * from flight_duration;
 ```
 5. RESULTS
+
 flight_id | duration
 ------------ | -------------
 627 | 0.583333333333333
