@@ -22,3 +22,19 @@ aircraft_code | time_used
 CN1	| 1754
 SU9	| 5208
 CR2	| 5449
+
+* Find the month with the most flight departures. 
+```
+SELECT to_char(scheduled_departure, 'Month') AS Month, COUNT(*) departures
+FROM flights
+GROUP BY month;
+```
+month | departures
+------------ | -------------
+June  |    	6560
+May   |   	9916
+
+
+
+
+
