@@ -11,11 +11,11 @@ You can install this demo postgres database at the [postgrespro site](https://po
 2. Basic Queries
 3. Basic Query
 
-How to Create a Function
+- How to Create a Function
 
-How to Create a Procedure
+- How to Create a Procedure
 
-How to Create a Run Log.
+- How to Create a Run Log.
 
-Create a Report to show the status of all flights from the previous day based on how many seats were occupied and the flight delays. 
+- Create a Report to show the status of all flights from the previous day based on how many seats were occupied and the flight delays. 
 
